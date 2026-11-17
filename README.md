@@ -4,9 +4,22 @@ This repo holds the released builds of `zp`, the command-line tool for the Zuper
 
 It holds no source code. Each release has one archive per system and a `SHA256SUMS` file.
 
-## Status
+## Install
 
-No release is published yet. The install command will be added here with the first release.
+macOS and Linux:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/ZuperHQ/zp-cli-releases/main/install.sh | sh
+```
+
+Windows (PowerShell):
+
+```powershell
+irm https://raw.githubusercontent.com/ZuperHQ/zp-cli-releases/main/install.ps1 | iex
+```
+
+The script installs the newest release into `~/.zuper`. It uses no `sudo`.
+To update, run the same command again. To install one version, add `-s -- --version X.Y.Z` after `sh`.
 
 ## Files of a release
 
