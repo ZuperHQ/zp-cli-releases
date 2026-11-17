@@ -10,11 +10,11 @@ It writes only below %LOCALAPPDATA%\Zuper:
 
 The one command, from the public repo of the releases. It downloads the newest release, checks it and installs it:
 
-  powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/ZuperHQ/zp-releases/main/install.ps1 | iex"
+  powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/ZuperHQ/zp-cli-releases/main/install.ps1 | iex"
 
 For one release, pass -Version:
 
-  powershell -ExecutionPolicy Bypass -c "& ([scriptblock]::Create((irm https://raw.githubusercontent.com/ZuperHQ/zp-releases/main/install.ps1))) -Version X.Y.Z"
+  powershell -ExecutionPolicy Bypass -c "& ([scriptblock]::Create((irm https://raw.githubusercontent.com/ZuperHQ/zp-cli-releases/main/install.ps1))) -Version X.Y.Z"
 
 Windows blocks script files by default, so start a copy of this script like this:
 
@@ -53,7 +53,7 @@ if (-not $env:LOCALAPPDATA) {
 
 # The public repo that holds the releases. ZP_RELEASES_URL names another server with the same two paths:
 # <url>/latest/download/<file> and <url>/download/vX.Y.Z/<file>.
-$ReleasesUrl = 'https://github.com/ZuperHQ/zp-releases/releases'
+$ReleasesUrl = 'https://github.com/ZuperHQ/zp-cli-releases/releases'
 if ($env:ZP_RELEASES_URL) { $ReleasesUrl = $env:ZP_RELEASES_URL }
 
 $Target = 'win32-x64'

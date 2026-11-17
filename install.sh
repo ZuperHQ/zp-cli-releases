@@ -2,7 +2,7 @@
 # Installs zp on macOS or Linux from an archive that carries its own Node.js.
 # The machine needs no Node.js and no npm. The script never uses sudo, and writes only below ~/.zuper.
 #
-#   curl -fsSL https://raw.githubusercontent.com/ZuperHQ/zp-releases/main/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/ZuperHQ/zp-cli-releases/main/install.sh | sh
 #                                                  downloads the newest release, checks it and installs it
 #   curl -fsSL <the same address> | sh -s -- --version X.Y.Z
 #                                                  the same, for one release
@@ -18,7 +18,7 @@ set -eu
 
 # The public repo that holds the releases. ZP_RELEASES_URL names another server with the same two paths:
 # <url>/latest/download/<file> and <url>/download/vX.Y.Z/<file>. The tests use it.
-RELEASES_URL="${ZP_RELEASES_URL:-https://github.com/ZuperHQ/zp-releases/releases}"
+RELEASES_URL="${ZP_RELEASES_URL:-https://github.com/ZuperHQ/zp-cli-releases/releases}"
 ZUPER_HOME="${HOME}/.zuper"
 INSTALL_ROOT="${ZUPER_HOME}/zp"
 BIN_DIR="${ZUPER_HOME}/bin"
